@@ -2,8 +2,8 @@
 
 session_start();
 
-include "../../../includes/functions.php";
-include "../../../includes/config.php";
+include "../../../system/wousoftware/system/includes/functions.php";
+include "../../../system/wousoftware/system/includes/config.php";
 session_checker();
 
 if($_SESSION['system_user_level'] == 0){

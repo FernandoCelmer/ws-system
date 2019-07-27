@@ -20,7 +20,7 @@ function recupera_senha($system_user_email){
 
 	if(!isset($system_user_email)){
 
-        //echo "Você esqueceu de preencher seu email.<br />
+        //echo "Vocï¿½ esqueceu de preencher seu email.<br />
 			//<strong>Use o mesmo email que utilizou em seu cadastro.</strong><br /><br />"; 
 		
 		$mensagem_preencher_campo[] = "";
@@ -30,21 +30,21 @@ function recupera_senha($system_user_email){
 
 	}
 
-	// Checando se o email informado está cadastrado
+	// Checando se o email informado estï¿½ cadastrado
 		
 	$sql_check = mysql_query("SELECT * FROM system_user WHERE system_user_email='{$system_user_email}'");
 	$sql_check_num = mysql_num_rows($sql_check);
 
 	if($sql_check_num == 0){
 
-		//echo "Este email não está cadastrado em nosso banco de dados.<br /><br />";
+		//echo "Este email nï¿½o estï¿½ cadastrado em nosso banco de dados.<br /><br />";
 		$mensagem_database[] = "";
 		include "password-form.php";
 		exit();
 
 	}
 	
-	// Se tudo OK vamos gerar uma nova senha e enviar para o email do usuário!
+	// Se tudo OK vamos gerar uma nova senha e enviar para o email do usuï¿½rio!
 
 	function makeRandomPassword(){
 
@@ -75,8 +75,8 @@ function recupera_senha($system_user_email){
 	$headers = "MIME-Version: 1.0\n";
 	$headers .= "Content-type: text/html; charset=iso-8859-1\n";
 	$headers .= "From: WouSoftware<wousoftware@wousoftware.com>"; //COLOQUE TEU EMAIL
-	$subject = "Recuperação de Senha";
-	$message = "Olá, redefinimos sua senha.<br /><br />
+	$subject = "Recuperaï¿½ï¿½o de Senha";
+	$message = "Olï¿½, redefinimos sua senha.<br /><br />
 
 	<strong>Nova Senha</strong>: {$senha_randomica}<br /><br />
 
@@ -87,7 +87,7 @@ function recupera_senha($system_user_email){
 	WouSoftware<br /><br /><br />
 
 
-	Esta é uma mensagem automática, por favor não responda!";
+	Esta ï¿½ uma mensagem automï¿½tica, por favor nï¿½o responda!";
 
 	mail($system_user_email, $subject, $message, $headers);
 	

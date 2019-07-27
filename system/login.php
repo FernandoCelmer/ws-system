@@ -2,7 +2,7 @@
 
 session_start();  // Inicia a session
 
-include "../includes/config.php";
+include "../includes/functions.php";
 
 $system_user_email = $_POST['system_user_email'];
 $system_user_password = $_POST['system_user_password'];

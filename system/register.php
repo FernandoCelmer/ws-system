@@ -1,7 +1,7 @@
 <?php
 
-include "../includes/config.php";
-include "../includes/functions.php";
+include "../system/wousoftware/system/includes/config.php";
+include "../system/wousoftware/system/includes/functions.php";
 
 $system_user_name = trim($_POST['system_user_name']);
 $system_user_code = trim($_POST['system_user_code']);
@@ -13,11 +13,11 @@ $system_user_ip = trim($_POST['system_user_ip']);
 
 
 
-/* Vamos checar algum erro nos campos, mas tenha em mente que existem formas bem mais eficientes de tratar os dados que são enviados ou n&atilde;o pelos campos do formulário */
+/* Vamos checar algum erro nos campos, mas tenha em mente que existem formas bem mais eficientes de tratar os dados que sï¿½o enviados ou n&atilde;o pelos campos do formulï¿½rio */
 
 if ((!$system_user_name) || (!$system_user_code) || (!$system_user_email)|| (!$system_user_phone) || (!$system_user_date)){
 
-	//echo "ERRO: Voc&ecirc; n&atilde;o enviou as seguintes informaç&otilde;es requeridas para o cadastro! <br /> <br />";
+	//echo "ERRO: Voc&ecirc; n&atilde;o enviou as seguintes informaï¿½&otilde;es requeridas para o cadastro! <br /> <br />";
 	if (!$system_user_name){
 		$mensagem_campo_name[] = "";
 	}
@@ -44,7 +44,7 @@ if ((!$system_user_name) || (!$system_user_code) || (!$system_user_email)|| (!$s
 }
 else{
 
-	/* Vamos checar se o nome de Usuário escolhido e/ou Email já existem no banco de dados */
+	/* Vamos checar se o nome de Usuï¿½rio escolhido e/ou Email jï¿½ existem no banco de dados */
 	$sql_email_check = mysql_query("SELECT COUNT(id_system_user) FROM system_user WHERE system_user_email='{$system_user_email}'");
 	$eReg = mysql_fetch_array($sql_email_check);
 	$email_check = $eReg[0];	
@@ -59,7 +59,7 @@ else{
 		}
 
 		//echo "<br />";
-		include "../system/register-form.php";
+		include "../system/wousoftware/system/register-form.php";
 	}
 	else
 	{
@@ -80,8 +80,8 @@ else{
             $v_mail = verifica_email($system_user_email);
 
             if ($v_mail){
-                /* Se passarmos por esta verificação ilesos é hora de finalmente cadastrar
-	    	    os dados Vamos utilizar uma função para gerar uma senha randômica */ 
+                /* Se passarmos por esta verificaï¿½ï¿½o ilesos ï¿½ hora de finalmente cadastrar
+	    	    os dados Vamos utilizar uma funï¿½ï¿½o para gerar uma senha randï¿½micaï¿½*/ 
 				
 				function makeRandomPassword(){
 					$salt = "abchefghjkmnpqrstuvwxyz0123456789";
@@ -120,11 +120,11 @@ else{
 
 					$id_system_user = mysql_insert_id();
 
-					// Enviar um email ao usu&aacute;rio para confirmação e ativar o cadastro!
+					// Enviar um email ao usu&aacute;rio para confirmaï¿½ï¿½o e ativar o cadastro!
 					$headers = "MIME-Version: 1.0\n";
 					$headers .= "Content-type: text/html; charset=iso-8859-1\n";
-					$headers .= "From: WouSoftware<wousoftware@wousoftware.com>"; // TEU DOMÌNIO E TEU EMAIL 
-					$subject = "Confirmação de Cadastro";
+					$headers .= "From: WouSoftware<wousoftware@wousoftware.com>"; // TEU DOMï¿½NIO E TEU EMAIL 
+					$subject = "Confirmaï¿½ï¿½o de Cadastro";
 					$mensagem = "
 					
 					<center>
@@ -138,8 +138,8 @@ else{
 								<a href ='http:// www.wousoftware.com'>www.wousoftware.com</a>
 								
 								<br/><br/>
-								Para confirmar seu cadastro e ativar sua conta, podendo assim acessar áreas exclusivas, 
-								por favor clique no link abaixo ou copie e cole o link na barra de endereço do seu navegador.
+								Para confirmar seu cadastro e ativar sua conta, podendo assim acessar ï¿½reas exclusivas, 
+								por favor clique no link abaixo ou copie e cole o link na barra de endereï¿½o do seu navegador.
 								<br /><br /> 
 
 							<a href ='http://www.wousoftware.com/system/activate.php?id=$id_system_user&code=$system_user_password'>
@@ -148,7 +148,7 @@ else{
 								</a>
 								<br/> <br/>
 								
-								Após a ativação de sua conta, você poderá ter acesso ao conteúdo exclusivo, 
+								Apï¿½s a ativaï¿½ï¿½o de sua conta, vocï¿½ poderï¿½ ter acesso ao conteï¿½do exclusivo, 
 								efetuando o login com os dados abaixo:
 								<br/> <br/> 
 
@@ -157,7 +157,7 @@ else{
 								<strong>Senha</strong>: {$senha_randomica}
 								<br /><br/> 
 								<br/> 
-								Esta é uma mensagem automática, por favor não responda!";
+								Esta ï¿½ uma mensagem automï¿½tica, por favor nï¿½o responda!";
 
 					mail($system_user_email, $subject, $mensagem, $headers);
 
@@ -173,7 +173,7 @@ else{
                 echo "<strong>ERRO:</strong><br />";
                 echo "O endere&ccedil;o de email [ <strong><em>".$system_user_email."</em></strong> ] que est&aacute; tentando utilizar n&atilde;o &eacute; v&aacute;lido.<br />";
                 echo "Por favor, utilize um email v&aacute;lido.<br /><br />";
-				include "../system/register-confirm.php"; 
+				include "../system/wousoftware/system/register-confirm.php"; 
             }
         }
     }
