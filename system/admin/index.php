@@ -1,5 +1,5 @@
 <?php
-
+/*
 session_start();
 
 include "../../includes/functions.php";
@@ -38,6 +38,8 @@ $total = mysql_num_rows($sql);
 //SUPPORT
 $sql = mysql_query("select * from support_ticket");
 $all_messages = mysql_num_rows($sql);
+
+*/
 ?>
 
 <!DOCTYPE html>

@@ -1,5 +1,7 @@
 <?php
+include "../../../system/wousoftware/system/includes/config.php";
 
+/*
 session_start();
 
 include "../../../includes/functions.php";
@@ -32,6 +34,7 @@ if($_SESSION['system_user_level'] == 1){
 	$maximo=10; //Quantidade Máxima de posts por página
 	$inicio = ($pag * $maximo) - $maximo; //Variável para LIMIT da sql
 	$paginas=ceil($contador/$maximo);	//Quantidade de páginas	
+	*/
 ?>
 
 <!DOCTYPE html>
