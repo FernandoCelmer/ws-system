@@ -19,7 +19,6 @@ ________________________________
 
 ________________________________
 
-# Front-end - ON
+# Technologies
 <br>
-
- 
+W3.CSS - https://www.w3schools.com/w3css/ <br> 
