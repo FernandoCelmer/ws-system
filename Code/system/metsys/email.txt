@@ -1,0 +1,39 @@
+					$headers = "MIME-Version: 1.0\n";
+					$headers .= "Content-type: text/html; charset=iso-8859-1\n";
+					$headers .= "From: WouSoftware<wousoftware@wousoftware.com>"; // TEU DOMÌNIO E TEU EMAIL 
+					$subject = "Confirmação de Cadastro";
+					$mensagem = "
+					
+					<center>
+					<a href='http://www.wousoftware.com'>
+                    <img border='0' src='http://system.wousoftware.com/img/wousoftware.png' width='500' height='68'></a>
+					</center>
+					<br/>
+					Prezado <strong>$w_nome</strong>,
+								<br/>
+								Obrigado pelo seu cadastro em nosso site!
+								<a href ='http:// www.wousoftware.com'>www.wousoftware.com</a>
+								
+								<br/><br/>
+								Para confirmar seu cadastro e ativar sua conta, podendo assim acessar áreas exclusivas, 
+								por favor clique no link abaixo ou copie e cole o link na barra de endereço do seu navegador.
+								<br /><br /> 
+
+							<a href ='http://www.wousoftware.com/system/activate.php?id=$id_system_user&code=$system_user_password'>
+						              http://www.wousoftware.com/system/activate.php?id=$id_system_user&code=$system_user_password
+
+								</a>
+								<br/> <br/>
+								
+								Após a ativação de sua conta, você poderá ter acesso ao conteúdo exclusivo, 
+								efetuando o login com os dados abaixo:
+								<br/> <br/> 
+
+								<strong>E-mail</strong>: {$system_user_email}
+								<br/> 
+								<strong>Senha</strong>: {$senha_randomica}
+								<br /><br/> 
+								<br/> 
+								Esta é uma mensagem automática, por favor não responda!";
+
+					mail($system_user_email, $subject, $mensagem, $headers);
