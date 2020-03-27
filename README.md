@@ -15,10 +15,9 @@ ________________________________
 
 # Database - ON
 <br>
-<img src=""></p>
+<img src="https://github.com/FernandoCelmer/ws-system/blob/master/DataBase/db_system.png?raw=true"></p>
 
 ________________________________
 
 # Technologies
-<br>
 W3.CSS - https://www.w3schools.com/w3css/ <br> 
