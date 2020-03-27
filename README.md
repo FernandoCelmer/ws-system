@@ -25,8 +25,8 @@ ________________________________
 
 # SCREEN - ON 
 <br>
-<img src="https://github.com/FernandoCelmer/ws-system/blob/master/DataBase/db_system.png?raw=true"></p>
+<img src="https://github.com/FernandoCelmer/ws-system/blob/master/Design/ws-system_01.jpg?raw=true"></p>
 <br>
-<img src="https://github.com/FernandoCelmer/ws-system/blob/master/DataBase/db_system.png?raw=true"></p>
+<img src="https://github.com/FernandoCelmer/ws-system/blob/master/Design/ws-system_02.jpg?raw=true"></p>
 <br>
-<img src="https://github.com/FernandoCelmer/ws-system/blob/master/DataBase/db_system.png?raw=true"></p>
+<img src="https://github.com/FernandoCelmer/ws-system/blob/master/Design/ws-system_03.jpg?raw=true"></p>
