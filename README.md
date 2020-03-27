@@ -1,8 +1,19 @@
 # ws-system
 
+Basic system for managing and purchasing software licenses...
+
+<p><b>Folders and Files</b></p>
+<ul>
+	<li>System // System folder.</li>
+  <li>Admin // System Administrator folder.</li>
+  <li>User // System User Folder.</li>
+</ul>
+
 Site: www.fernandocelmer.com
 </br>
 E-mail: email@fernandocelmer.com
+________________________________
+<p>
 ________________________________
 
 # Development Platform
