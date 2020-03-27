@@ -4,9 +4,10 @@ Basic system for managing and purchasing software licenses...
 
 <p><b>Folders and Files</b></p>
 <ul>
-	<li>System // System folder.</li>
-  <li>Admin // System Administrator folder.</li>
-  <li>User // System User Folder.</li>
+  <li>system // System folder.</li>
+  <li>admin // System Administrator folder.</li>
+  <li>user // System User Folder.</li>
+  <li>Includes //System configuration files.</li>
 </ul>
 
 Site: www.fernandocelmer.com
