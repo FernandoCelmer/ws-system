@@ -1,4 +1,4 @@
-# ws-system
+# [ws-system]
 
 Basic system for managing and purchasing software licenses...
 
