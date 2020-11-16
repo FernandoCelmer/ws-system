@@ -1,2 +1,38 @@
-# ws-system
- 
+# [ws-system]
+
+Basic system for managing and purchasing software licenses...
+
+<p><b>Folders and Files</b></p>
+<ul>
+  <li>system // System folder.</li>
+  <li>admin // System Administrator folder.</li>
+  <li>user // System User Folder.</li>
+  <li>Includes //System configuration files.</li>
+</ul>
+
+Site: www.fernandocelmer.com
+</br>
+E-mail: email@fernandocelmer.com
+
+# Development Platform
+<b>SOFTWARES</b><br>
+Github Desktop - https://desktop.github.com/ <br>
+Mysql Workbench - https://www.mysql.com/products/workbench/ <br>
+Visual Studio Code - https://code.visualstudio.com/download <br>
+XAMPP - Optional
+
+# Technologies
+W3.CSS - https://www.w3schools.com/w3css/ <br> 
+
+
+# Database - ON
+________________________________
+<img src="https://github.com/FernandoCelmer/ws-system/blob/master/DataBase/db_system.png?raw=true"></p>
+
+# SCREEN - ON 
+________________________________
+<img src="https://github.com/FernandoCelmer/ws-system/blob/master/Design/ws-system_01.jpg?raw=true"></p>
+<br>
+<img src="https://github.com/FernandoCelmer/ws-system/blob/master/Design/ws-system_02.jpg?raw=true"></p>
+<br>
+<img src="https://github.com/FernandoCelmer/ws-system/blob/master/Design/ws-system_03.jpg?raw=true"></p>
